@@ -1,10 +1,12 @@
-package com.ivy.design.system
+package dev.tonholo.ivy.design.system.core.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.ColorScheme
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.darkColorScheme
+import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
-import com.ivy.design.system.colors.IvyColors
+import dev.tonholo.ivy.design.system.core.colors.IvyColors
 
 @Composable
 fun IvyMaterial3Theme(
@@ -18,7 +20,7 @@ fun IvyMaterial3Theme(
     )
 }
 
-private fun ivyLightColorScheme(): ColorScheme = ColorScheme(
+private fun ivyLightColorScheme(): ColorScheme = lightColorScheme(
     primary = IvyColors.Purple.primary,
     onPrimary = IvyColors.White,
     primaryContainer = IvyColors.Purple.light,
@@ -53,7 +55,7 @@ private fun ivyLightColorScheme(): ColorScheme = ColorScheme(
     scrim = IvyColors.ExtraDarkGray.copy(alpha = 0.8f)
 )
 
-private fun ivyDarkColorScheme(isTrueBlack: Boolean): ColorScheme = ColorScheme(
+private fun ivyDarkColorScheme(isTrueBlack: Boolean): ColorScheme = darkColorScheme(
     primary = IvyColors.Purple.primary,
     onPrimary = IvyColors.White,
     primaryContainer = IvyColors.Purple.light,

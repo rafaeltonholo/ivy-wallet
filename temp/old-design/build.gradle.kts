@@ -9,6 +9,7 @@ android {
 dependencies {
     implementation(projects.shared.base)
     implementation(projects.shared.ui.core)
+    implementation(projects.shared.ui.designSystem.core)
 
     implementation(projects.shared.domain)
 }

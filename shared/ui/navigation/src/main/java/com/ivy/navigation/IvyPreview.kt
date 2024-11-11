@@ -1,7 +1,7 @@
 package com.ivy.navigation
 
 import androidx.compose.runtime.Composable
-import com.ivy.design.system.IvyMaterial3Theme
+import dev.tonholo.ivy.design.system.core.theme.IvyMaterial3Theme
 
 @Composable
 fun IvyPreview(

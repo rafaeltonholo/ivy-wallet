@@ -8,7 +8,7 @@ android {
 
 dependencies {
     implementation(projects.shared.ui.core)
-
+    implementation(projects.shared.ui.designSystem.core)
     // for this module we need test deps as "implementation" and not only "testImplementation"
     // because it'll be added as "testImplementation"
     implementation(libs.bundles.testing)
