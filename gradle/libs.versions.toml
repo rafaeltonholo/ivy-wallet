@@ -3,6 +3,8 @@ kotlin = "2.0.21"
 kotlin-coroutines = "1.9.0"
 kotlinx-serialization-json = "1.7.3"
 ktor = "3.0.1"
+koin = "4.0.0"
+koin-annotations = "2.0.0-Beta1"
 arrow = "1.2.4"
 kotest = "5.9.1"
 # https://developer.android.com/jetpack/androidx/releases/compose
@@ -47,6 +49,14 @@ kotlinx-collections-immutable = { module = "org.jetbrains.kotlinx:kotlinx-collec
 # KotlinX Serialization
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization-json" }
 kotlinx-serialization-plugin = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
+
+# Koin
+io-insertkoin-koin-bom = { module = "io.insert-koin:koin-bom", version.ref = "koin" }
+io-insertkoin-koin-core = { module = "io.insert-koin:koin-core" }
+io-insertkoin-koin-android = { module = "io.insert-koin:koin-android" }
+io-insertkoin-koin-annotations-bom = { module = "io.insert-koin:koin-annotations-bom", version.ref = "koin-annotations" }
+io-insertkoin-koin-annotations = { module = "io.insert-koin:koin-annotations" }
+io-insertkoin-koin-ksp-compiler = { module = "io.insert-koin:koin-ksp-compiler" }
 
 # Ktor
 ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
