@@ -16,6 +16,7 @@ android {
         abortOnError = false
     }
 
+    @Suppress("UnstableApiUsage")
     testOptions {
         unitTests {
             isReturnDefaultValues = true

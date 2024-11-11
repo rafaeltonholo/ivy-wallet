@@ -18,8 +18,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.ivy.design.system.colors.IvyColors
 import com.ivy.ui.R
+import dev.tonholo.ivy.design.system.core.colors.IvyColors
 
 const val IvyWalletGitHubRepoUrl = "https://github.com/rafaeltonholo/ivy-wallet"
 
@@ -70,7 +70,7 @@ private fun OpenSourceTexts(modifier: Modifier = Modifier) {
         Text(
             text = IvyWalletGitHubRepoUrl,
             style = MaterialTheme.typography.labelSmall,
-            color = IvyColors.Blue.primary
+            color = IvyColors.Blue.primary,
         )
     }
 }

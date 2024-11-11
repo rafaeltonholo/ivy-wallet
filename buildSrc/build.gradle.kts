@@ -13,10 +13,17 @@ repositories {
     gradlePluginPortal()
 }
 
+kotlin {
+    compilerOptions.freeCompilerArgs.addAll(
+        "-Xcontext-receivers",
+    )
+}
+
 dependencies {
     implementation(libs.android.gradle.plugin)
     implementation(libs.kotlin.gradle.plugin)
     implementation(libs.compose.compiler.plugin)
+    implementation(libs.compose.multiplatform.plugin)
     implementation(libs.hilt.gradle.plugin)
     implementation(libs.google.services.plugin)
     implementation(libs.firebase.crashlytics.gradle.plugin)

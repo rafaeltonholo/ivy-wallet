@@ -1,4 +1,4 @@
-package com.ivy.design.system.colors
+package dev.tonholo.ivy.design.system.core.colors
 
 import androidx.compose.ui.graphics.Color
 

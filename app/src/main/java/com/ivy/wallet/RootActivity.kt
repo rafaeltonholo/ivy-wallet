@@ -36,7 +36,7 @@ import com.ivy.base.time.TimeConverter
 import com.ivy.base.time.TimeProvider
 import com.ivy.design.api.IvyDesign
 import com.ivy.design.api.IvyUI
-import com.ivy.design.system.IvyMaterial3Theme
+import dev.tonholo.ivy.design.system.core.theme.IvyMaterial3Theme
 import com.ivy.domain.RootScreen
 import com.ivy.home.customerjourney.CustomerJourneyCardsProvider
 import com.ivy.legacy.Constants
