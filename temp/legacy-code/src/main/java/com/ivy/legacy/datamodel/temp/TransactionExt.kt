@@ -10,6 +10,8 @@ import com.ivy.legacy.datamodel.toEntity
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.persistentListOf
 import kotlinx.collections.immutable.toImmutableList
+import kotlin.uuid.ExperimentalUuidApi
+import kotlin.uuid.toKotlinUuid
 
 fun Transaction.toLegacy(mapper: TransactionMapper): LegacyTransaction {
     return with(mapper) { toEntity().toLegacyDomain() }
@@ -43,7 +45,8 @@ fun TransactionEntity.toLegacyDomain(
     tags = tags
 )
 
-fun Tag.toLegacyTag(): LegacyTag = LegacyTag(this.id.value, this.name.value)
+@OptIn(ExperimentalUuidApi::class)
+fun Tag.toLegacyTag(): LegacyTag = LegacyTag(this.id.value.toKotlinUuid(), this.name.value)
 fun List<Tag>.toImmutableLegacyTags(): ImmutableList<LegacyTag> =
     this.map { it.toLegacyTag() }.toImmutableList()
 

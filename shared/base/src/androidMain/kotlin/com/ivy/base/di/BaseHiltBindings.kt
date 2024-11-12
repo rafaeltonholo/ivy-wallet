@@ -26,5 +26,5 @@ interface BaseHiltBindings {
     fun bindTimeConverter(impl: StandardTimeConverter): TimeConverter
 
     @Binds
-    fun resourceProvider(impl: AndroidResourceProvider): ResourceProvider
+    fun resourceProvider(impl: AndroidResourceProvider): ResourceProvider<Int>
 }

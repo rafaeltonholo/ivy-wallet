@@ -90,6 +90,7 @@ import kotlinx.collections.immutable.persistentListOf
 import java.time.LocalDateTime
 import java.time.ZoneOffset
 import java.util.UUID
+import kotlin.uuid.ExperimentalUuidApi
 
 @Suppress("CyclomaticComplexMethod", "LongMethod")
 @Deprecated("Old design system. Use `:ivy-design` and Material3")
@@ -269,6 +270,7 @@ fun TransactionCard(
     }
 }
 
+@OptIn(ExperimentalUuidApi::class)
 @Composable
 private fun ColumnScope.TransactionTags(tags: ImmutableList<LegacyTag>) {
     Spacer(Modifier.height(12.dp))
