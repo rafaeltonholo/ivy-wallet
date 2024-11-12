@@ -9,11 +9,11 @@ import javax.inject.Inject
 class AndroidResourceProvider @Inject constructor(
     @ApplicationContext
     private val context: Context,
-) : ResourceProvider {
-    override fun getString(@StringRes resId: Int): String = context.getString(resId)
+) : ResourceProvider<Int> {
+    override fun getString(@StringRes resource: Int): String = context.getString(resource)
 
     override fun getString(
-        @StringRes resId: Int,
-        vararg args: Any
-    ): String = context.getString(resId, args)
+        @StringRes resource: Int,
+        vararg args: Any,
+    ): String = context.getString(resource, args)
 }

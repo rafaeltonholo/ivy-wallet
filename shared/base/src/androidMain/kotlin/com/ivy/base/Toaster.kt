@@ -12,7 +12,7 @@ import javax.inject.Inject
 class Toaster @Inject constructor(
     @ApplicationContext
     private val context: Context,
-    private val resourceProvider: ResourceProvider,
+    private val resourceProvider: ResourceProvider<Int>,
     private val dispatchers: DispatchersProvider,
 ) {
     suspend fun show(@StringRes messageId: Int, duration: Int = Toast.LENGTH_LONG) {

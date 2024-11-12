@@ -3,6 +3,7 @@ import dev.tonholo.ivy.kspAndroid
 import dev.tonholo.ivy.kspIosArm64
 import dev.tonholo.ivy.kspIosSimulatorArm64
 import dev.tonholo.ivy.kspIosX64
+import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompilationTask
 
 plugins {
@@ -15,7 +16,7 @@ kotlin {
         commonMain.dependencies {
             implementation(bom(libs.io.insertkoin.koin.bom))
             implementation(libs.io.insertkoin.koin.core)
-            implementation(bom(libs.io.insertkoin.koin.annotations.bom))
+            api(bom(libs.io.insertkoin.koin.annotations.bom))
             api(libs.io.insertkoin.koin.annotations)
         }
         androidMain.dependencies {
@@ -42,7 +43,8 @@ ksp {
 }
 
 project.tasks.withType(KotlinCompilationTask::class.java).configureEach {
-    if (name != "kspCommonMainMetadata") {
+    val isKmp = this@configureEach.extensions.findByType<KotlinMultiplatformExtension>() != null
+    if (isKmp && name != "kspCommonMainMetadata") {
         dependsOn("kspCommonMainMetadata")
     }
 }

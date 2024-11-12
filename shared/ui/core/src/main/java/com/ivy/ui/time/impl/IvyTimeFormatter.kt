@@ -15,7 +15,7 @@ import java.time.format.DateTimeFormatter
 import javax.inject.Inject
 
 class IvyTimeFormatter @Inject constructor(
-    private val resourceProvider: ResourceProvider,
+    private val resourceProvider: ResourceProvider<Int>,
     private val timeProvider: TimeProvider,
     private val converter: TimeConverter,
     private val devicePreferences: DevicePreferences,
